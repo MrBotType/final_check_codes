@@ -1,0 +1,21 @@
+<form [formGroup]="loginForm" >
+
+    <h1>Log In</h1>
+    
+    <fieldset>
+    <div class="form-group">
+      <label for="loginmail">Email:</label>
+      <input type="email" id="loginemail"  formControlName="email">
+      <!-- <div class ="validationdiv"><span class="messegeborder">Email Id required </span> </div> -->
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="loginpassword"  formControlName="password">
+      <!-- <div class ="validationdiv" ><span class="messegeborder">Password required</span>  </div> -->
+    </div>
+    </fieldset>
+    
+    
+    <button type="submit" [disabled]="!loginForm.valid"  id="loginButton" (click)="login();" >Log In</button>
+ 
+  </form>

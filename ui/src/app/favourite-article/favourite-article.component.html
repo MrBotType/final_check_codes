@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+  
+    <div class="col-lg-6  col-sm-12" *ngFor="let article of articlesOfUser">
+      <div class="card text-center">
+        <div class="card-header">
+          {{article.title}}
+
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-8 sm-12">
+
+              <h6 class="card-text">{{article.description}}</h6>
+            </div>
+            <input type="hidden" value="{{article.url}}" >
+
+          </div>
+          <!-- <a href= "http://www.sys-con.com/node/4371031" class="btn btn-primary">Go somewhere</a>-->
+        </div>
+        <button type="button" class="btn btn-danger " (click)="delete(article.url)">delete</button>
+
+
+      </div>
+     
+
+    </div>
+  </div>
+
+</div>
+
